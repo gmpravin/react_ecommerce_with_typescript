@@ -3,7 +3,7 @@
 This project not fully completed
 
 * backend completed
-* frontend partially completed... need to implement a admin panal and item adding something
+* frontend partially completed... need to implement a admin panal and item adding function
 
 Technology used
 * React.js

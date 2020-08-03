@@ -1,0 +1,92 @@
+#erremail {
+  color: red;
+  font-size: 5px;
+}
+
+#errps {
+  color: red;
+  font-size: 5px;
+}
+.loginpage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 90vh;
+  width: 70%;
+}
+
+.sweetloading {
+  background-color: white;
+  margin-top: -40px;
+  width: 100%;
+  height: 84vh;
+  position: absolute;
+  display: none;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+
+.label {
+  margin-left: 6px;
+  font-size: 15px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 300;
+}
+.title {
+  margin-left: 8px;
+  margin-bottom: 35px;
+  font-weight: 700;
+  font-family: 'Manrope', sans-serif;
+  font-size: 22px;
+}
+
+.iicon {
+  left: -25px;
+  position: relative;
+}
+.input {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.loginButton {
+  margin-top: 20px;
+  width: 225px;
+  padding: 10px;
+  border-radius: 3px;
+  border: none;
+  background: #00c6ff;
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+  color: white;
+  font-weight: bold;
+  margin-left: 6px;
+}
+.form {
+  width: 300px;
+  height: 300px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.register {
+  font-size: 10px;
+  padding: 25px;
+  margin-left: -11px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 300;
+}

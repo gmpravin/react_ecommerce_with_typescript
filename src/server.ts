@@ -1,9 +1,6 @@
 import app from './app';
 import * as mongoose from 'mongoose';
 
-
-
-
 const PORT = 8000;
 mongoose
   .connect(

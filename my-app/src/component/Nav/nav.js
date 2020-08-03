@@ -56,11 +56,15 @@ export const Nav = () => {
   return (
     <div>
       <nav>
-        <div class="logo">Logo</div>
+        <div class="logo">
+          <Link to={'/'} style={{ textDecoration: 'none', color: 'white' }}>
+            React Ecommerce
+          </Link>
+        </div>
         <ul class="nav-links">
           <div class="dropdown">
             <button onClick={myFunction} class="dropbtn">
-              Dropdown
+              catagory
             </button>
             <div id="myDropdown" class="dropdown-content">
               {Object.values(names).map((i, index) => {

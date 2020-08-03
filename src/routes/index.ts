@@ -2,7 +2,6 @@ import { SignupController } from '../controller/signup';
 import { LoginController } from '../controller/login';
 import { ProductsController } from '../controller/Products';
 import { CategoryController } from '../controller/category';
-import { PaymentController } from '../controller/payment';
 import createValidation from '../validator/validator';
 import { isAuthenticated } from '../functions/ensuretoken';
 
@@ -10,7 +9,6 @@ const signupController: SignupController = new SignupController();
 const loginController: LoginController = new LoginController();
 const productController: ProductsController = new ProductsController();
 const categoryController: CategoryController = new CategoryController();
-const paymentController: PaymentController = new PaymentController();
 
 export class Routes {
   public routes(app): void {
@@ -38,6 +36,5 @@ export class Routes {
 
     app.route('/api/catagory/:category').get(categoryController.getCategory);
     app.route('/api/getcatagoryName').get(categoryController.getCategoryName);
-    app.route('api/payment').post(paymentController.payment);
   }
 }

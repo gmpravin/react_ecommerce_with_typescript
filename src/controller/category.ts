@@ -54,44 +54,4 @@ export class CategoryController {
       .then(data => res.json({ msg: 'Successfully deleted product ' }))
       .catch(err => res.json(err));
   };
-
-  /**
-   * getProductById
-   */
-  //   getProductById = async (req: Request, res: Response) => {
-  //     const id = req.params.id;
-  //     console.log(id);
-
-  //     await Products.findById(id)
-  //       .then(data => {
-  //         if (data === null) {
-  //           res.json({ msg: 'Not Found' });
-  //         } else {
-  //           res.json(data);
-  //         }
-  //       })
-
-  //       .catch(err => res.json(err));
-  //   };
-
-  //   /**
-  //    * UpdateProductById
-  //    */
-  //   UpdateProductById = async (req: Request, res: Response) => {
-  //     const id = req.params.id;
-  //     const data = {
-  //       product_name: req.body.product_name,
-  //       product_supplier: req.body.product_supplier,
-  //       product_price: req.body.product_price,
-  //       product_images: {
-  //         data: req.files.files.buffer,
-  //         contentType: req.files.files.mimetype,
-  //       },
-  //     };
-  //     await Products.findOneAndUpdate(id, data)
-  //       .then(doc => {
-  //         res.json({ msg: 'Successfully updated product' });
-  //       })
-  //       .catch(err => console.log(err));
-  //   };
 }

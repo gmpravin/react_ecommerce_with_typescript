@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Products } from '../index';
 import style from './home.module.css';
 import { connect } from 'react-redux';
-
+import CircleLoader from 'react-spinners/CircleLoader';
 class Home extends Component {
   state = {
     products: [],
@@ -18,16 +18,21 @@ class Home extends Component {
       .then(res => res.json())
       .then(async json => {
         await this.setState({ products: json });
+        await this.setState({ loading: false });
       });
   };
 
   render() {
-    const { products } = this.state;
+    const { products, loading } = this.state;
 
     return (
       <div>
         <div className={style.Container}>
-          <Products get={products} />
+          {loading ? (
+            <CircleLoader size={50} color={'#123abc'} loading={loading} />
+          ) : (
+            <Products get={products} />
+          )}
         </div>
       </div>
     );

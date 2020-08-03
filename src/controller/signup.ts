@@ -10,11 +10,12 @@ export class SignupController {
     const Result = validationResult(req);
 
     var errors = Result;
+    const { name, email, phone_no, password } = req.body;
     const data = {
-      name: req.body.name,
-      email: req.body.email,
-      phone_no: req.body.phone_no,
-      password: hash(req.body.password),
+      name,
+      email,
+      phone_no,
+      password: hash(password),
       admin: 1,
     };
     if (!Result.isEmpty()) {

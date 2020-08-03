@@ -36,13 +36,20 @@ export class ProductsController {
         return result;
       })
       .then(async url => {
+        const {
+          product_name,
+          product_supplier,
+          product_price,
+          product_description,
+          product_category,
+        } = req.body;
         const data = {
-          product_name: req.body.product_name,
-          product_supplier: req.body.product_supplier,
-          product_price: req.body.product_price,
+          product_name,
+          product_supplier,
+          product_price,
           product_images: url.secure_url,
-          product_description: req.body.product_description,
-          product_category: req.body.product_category,
+          product_description,
+          product_category,
         };
 
         console.log(data);

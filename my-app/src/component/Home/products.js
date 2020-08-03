@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import style from './home.module.css';
+import CircleLoader from 'react-spinners/CircleLoader';
 export const Products = ({ get }) => {
   return (
     <div>
@@ -25,7 +26,9 @@ export const Products = ({ get }) => {
             );
           })}
         </div>
-      ) : null}
+      ) : (
+        <CircleLoader size={50} color={'#123abc'} loading={!get} />
+      )}
     </div>
   );
 };

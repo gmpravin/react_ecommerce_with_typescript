@@ -17,9 +17,10 @@ export class LoginController {
     if (!result.isEmpty()) {
       res.json(errors);
     } else {
+      const { email, password } = req.body;
       const data = {
-        email: req.body.email,
-        password: req.body.password,
+        email,
+        password,
       };
 
       await Login.findOne({ email: data.email })
